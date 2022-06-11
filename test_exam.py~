@@ -1,0 +1,18 @@
+import exam
+import sys
+import matplotlib.pyplot as plt
+
+
+start, end, jump, ip = [a for a in sys.argv[1:-1]] + [sys.argv[-1]]
+
+
+
+megabytes = [1]
+run = [get_time(ip, 1)]
+for i in range (start, end+1, jump) :
+    run.append(get_time(ip, i))
+    megabytes.append(i)
+    print(f'{i} MBs in {r[-1]} seconds')
+
+plt.plot(x, r)
+plt.savefig("latency.png")

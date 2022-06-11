@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+
+import subprocessing
+import re
+
+def command(c) :
+    return subprocess.check_output(command, shell = True)
+
+command = 'time scp ... ...'
+target = str(command(c))
+
+result = re.search("....", target)
+
+print("Time:", result)
